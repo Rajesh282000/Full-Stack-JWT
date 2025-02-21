@@ -16,15 +16,6 @@ mvn spring-boot:run
 
 The application will be available at `http://localhost:8080`
 
-## How to run database
-
-This will start an empty database. The schema will be created when started the application.
-
-```
-docker run -d -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_USER=backend -e POSTGRES_PASSWORD=backend -e POSTGRES_DB=backenddb -p 5432:5432 postgres:13
-```
-
-Warning, the schema will be dropped and re-created each time the application starts.
 
 To change this behavior, change the value of `spring.jpa.hibernante.ddl-auto` and `spring.datasource.initialization-mode` in the `application.yml` file.
 
